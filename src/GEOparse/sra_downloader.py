@@ -95,12 +95,12 @@ class SRADownloader(object):
         self.directory = os.path.abspath(
             os.path.join(
                 directory,
-                "%s_%s_%s"
+                "%s_%s"
                 % (
                     "Supp",
-                    self.gsm.get_accession(),
-                    re.sub(name_regex, "_", self.gsm.metadata["title"][0]),
-                ),
+                    self.gsm.get_accession()#,
+                    #re.sub(name_regex, "_", self.gsm.metadata["title"][0]),
+                )#,
             )
         )
 

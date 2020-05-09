@@ -470,15 +470,19 @@ class GSM(SimpleGEO):
         directory_path = os.path.abspath(
             os.path.join(
                 directory,
-                "%s_%s_%s"
+                "%s_%s"
                 % (
                     "Supp",
-                    self.get_accession(),
+                    self.get_accession()#,
                     # the directory name cannot contain many of the signs
-                    re.sub(r"[\s\*\?\(\),\.;]", "_", self.metadata["title"][0]),
-                ),
+                    #re.sub(r"[\s\*\?\(\),\.;]", "_", self.metadata["title"][0]),
+                )#,
             )
         )
+
+        print("--nirmalya--")
+        print(directory_path)
+        print("....")
 
         utils.mkdir_p(os.path.abspath(directory_path))
         downloaded_paths = dict()
